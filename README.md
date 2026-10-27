@@ -2,7 +2,7 @@
 
 A simple click counter built with HTML, CSS and JavaScript. Press **+** to add one, **-** to subtract one, and **Reset** to go back to zero. The number never goes below zero.
 
-**Live demo:** https://YOUR-USERNAME.github.io/click-counter/
+**Live demo:** https://ordinaryphantom-lgtm.github.io/Click-Counter/
 
 ![Click Counter screenshot](Click-Counter.png)
 

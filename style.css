@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap");
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  font-family: "Plus Jakarta Sans", "Segoe UI", Arial, sans-serif;
+  background:
+    linear-gradient(180deg, rgba(8, 16, 32, 0.5), rgba(5, 10, 20, 0.8)),
+    url("https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=2000&q=80")
+    center / cover no-repeat fixed;
+  background-color: #0f1d33; /* fallback if the image doesn't load */
+}
+
+/* Open layout: no container, content sits directly on the photo */
+.app {
+  width: 100%;
+  max-width: 960px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  gap: 64px;
+  color: #fff;
+}
+
+/* Left side: instructions */
+.info h2 {
+  margin: 0 0 14px;
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.info p {
+  margin: 0 0 22px;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 15px;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.steps li {
+  padding: 8px 0 8px 14px;
+  border-left: 2px solid rgba(255, 255, 255, 0.5);
+  margin-bottom: 8px;
+}
+
+.steps b { font-weight: 700; }
+
+/* Right side: number + buttons */
+.counter { text-align: center; }
+
+#count {
+  margin: 0 0 16px;
+  padding: 36px 12px;
+  font-size: 88px;
+  font-weight: 600;
+  line-height: 1;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.buttons {
+  display: flex;
+  gap: 12px;
+}
+
+button {
+  flex: 1;
+  height: 56px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+  color: #fff;
+  font-family: inherit;
+  font-size: 22px;
+  font-weight: 600;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: background 0.2s;
+}
+
+button:hover { background: rgba(255, 255, 255, 0.28); }
+button:focus-visible { outline: 2px solid #fff; outline-offset: 2px; }
+
+#reset { font-size: 15px; font-weight: 400; }
+
+/* Mobile: stack the two sides */
+@media (max-width: 720px) {
+  .app {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .info h2 { font-size: 30px; }
+}
